@@ -1,6 +1,6 @@
 [submodule "third_party/thrust"]
 	path = third_party/thrust
-	url = git@github.com:NVIDIA/thrust.git
+	url = https://github.com/NVIDIA/thrust.git
 [submodule "third_party/simple_paradis"]
 	path = third_party/simple_paradis
 	url = https://github.com/odanivan/simple_paradis.git

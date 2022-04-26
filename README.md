@@ -1,6 +1,11 @@
 # radix-mgpu-sort
 RMG Sort: Radix-Partitioning-Based Multi-GPU Sorting
 
+## How to initialize the project
+```
+git submodule update --init --recursive
+```
+
 ## How to build and run
 ```
 ./build.sh

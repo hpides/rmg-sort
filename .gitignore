@@ -4,3 +4,11 @@
 *.ptx
 *.cubin
 *.fatbin
+build
+build_dgx
+build_ac922
+debug
+*__pycache__*
+*._*
+.DS_Store
+.vscode

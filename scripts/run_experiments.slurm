@@ -11,5 +11,5 @@
 #SBATCH --mem=900G
 #SBATCH --time="1-12"
 
-./build_dgx.sh
-python3 scripts/run_experiments.py build_dgx
+./build.sh
+python3 scripts/run_experiments.py build

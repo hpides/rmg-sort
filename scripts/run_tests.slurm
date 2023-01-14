@@ -11,7 +11,6 @@
 #SBATCH --mem=100G
 #SBATCH --time="1-12"
 
-./build_dgx.sh
 python3 -u scripts/run_tests.py 8 build_dgx default | tee default_test_results_dgx.txt
 python3 -u scripts/run_tests.py 8 build_dgx skew | tee skew_test_results_dgx.txt
 python3 -u scripts/run_tests.py 8 build_dgx custom | tee custom_test_results_dgx.txt

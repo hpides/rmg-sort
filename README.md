@@ -12,7 +12,7 @@ To run one script that builds the project, runs evaluation experiments, and gene
 ./run_all.sh
 ```
 
-**Option B)** Just call a script that will automatically install the required pip-dependencies, clone this repository for you, and call the `run_all.sh` script. For this, you only need this one single script file on your filesystem:
+**Option B)** Just call a script that will automatically install the required pip-dependencies, clone this repository, and call the `run_all.sh` script for you. For this, you only need this one single script file on your filesystem:
 ```
 ./install_and_run_all.slurm
 ```

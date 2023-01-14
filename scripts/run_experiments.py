@@ -26,11 +26,11 @@ if __name__ == "__main__":
     profiler_output_path.mkdir(parents=True, exist_ok=True)
 
     experiments_to_run = [
-        # "num_keys_to_sort_duration", "data_type_to_sort_duration",
-        # "distribution_type_to_sort_duration",
-        # "num_keys_to_sort_duration_profile_nsys",
+        "num_keys_to_sort_duration", "data_type_to_sort_duration",
+        "distribution_type_to_sort_duration",
+        "num_keys_to_sort_duration_profile_nsys",
         "sorting_algorithm_to_sort_duration",
-        # "distribution_type_to_sort_duration_profile_nsys"
+        "distribution_type_to_sort_duration_profile_nsys"
     ]
 
     for experiment in benchmark.experiments:

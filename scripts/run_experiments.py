@@ -8,9 +8,13 @@ import benchmark
 if __name__ == "__main__":
 
     build_folder = "build"
+    results_folder = time.strftime("%Y_%m_%d_%H_%M_%S")
 
     if len(sys.argv) >= 2:
         build_folder = sys.argv[1]
+
+    if len(sys.argv) >= 3:
+        results_folder = sys.argv[2]
 
     benchmark.InitExperiments()
 
@@ -19,7 +23,7 @@ if __name__ == "__main__":
     script_path = pathlib.Path(__file__).parent.resolve()
     executable_path = pathlib.Path(script_path / executables_path).resolve()
     output_path = pathlib.Path(script_path / benchmark.experiments_path /
-                               time.strftime("%Y_%m_%d_%H_%M_%S")).resolve()
+                                results_folder).resolve()
     profiler_output_path = pathlib.Path(output_path / "profiler").resolve()
 
     output_path.mkdir(parents=True, exist_ok=True)

@@ -11,5 +11,9 @@
 #SBATCH --mem=100G
 #SBATCH --time="1-12"
 
-./install.sh
+# To be scheduled via slurm. Call this script from within the directory that you want to install rmg-sort into.
+pip install matplotlib
+pip install pandas
+git clone https://github.com/hpides/rmg-sort.git
+cd rmg-sort
 ./run_all.sh

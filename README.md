@@ -26,6 +26,8 @@ This creates an `experiments` folder and places the benchmark results into a sub
 ```
 sbatch scripts/run_experiments.slurm
 ```
+Change the slurm options in ```run_experiments.slurm``` as needed, e.g. the server name and the requested resources.
+
 
 ## How to generate plots for the experiment results
 

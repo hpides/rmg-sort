@@ -15,11 +15,17 @@ numactl -N 0 -m 0 ./build/radix-mgpu-sort 2000000000 0,1,2,3
 numactl -N 0 -m 0 ./build/radix-mgpu-sort 30000 0,1,2,3 uint32 uniform 0 DEBUG
 ```
 
-## How to run evaluation experiments
+## How to run evaluation experiments from a live ssh-session on a multi-GPU server:
 ```
 python3 scripts/run_experiments.py build
 ```
 This creates an `experiments` folder and places the benchmark results into a subfolder, named after the current date/time (e.g., `2022_02_22_23_59_59`).
+
+
+## How to schedule to run evaluation experiments via slurm:
+```
+sbatch scripts/run_experiments.slurm
+```
 
 ## How to generate plots for the experiment results
 

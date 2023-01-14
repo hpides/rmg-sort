@@ -7,7 +7,7 @@ partitioning strategy that efficiently utilizes high-speed P2P interconnects whi
 
 To run one script that builds the project, runs evaluation experiments, and generates PDF plots for the results, there are two options:
 
-**Option A)** Clone this repository or obtain the sources via .zip download. Then, from within the rmg-sort root directory, execute:
+**Option A)** Clone this repository. Then, from within the rmg-sort root directory, execute:
 ```
 ./run_all.sh
 ```

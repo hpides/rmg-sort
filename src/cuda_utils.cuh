@@ -2,15 +2,20 @@
 
 #include <thrust/device_vector.h>
 #include <thrust/host_vector.h>
-#include <thrust/system/cuda/experimental/pinned_allocator.h>
+#include <thrust/system/cuda/memory_resource.h>
 
 #include <iomanip>
 #include <iostream>
 
 typedef unsigned long long int uint64_cu;
 
+using mr = thrust::system::cuda::universal_host_pinned_memory_resource;
+
 template <typename T>
-using PinnedHostVector = thrust::host_vector<T, thrust::system::cuda::experimental::pinned_allocator<T>>;
+using pinned_allocator = thrust::mr::stateless_resource_allocator<T, mr >;
+
+template <typename T>
+using PinnedHostVector = thrust::host_vector<T, pinned_allocator<T>>;
 
 template <typename T>
 void printHostVector(T* begin, size_t n) {

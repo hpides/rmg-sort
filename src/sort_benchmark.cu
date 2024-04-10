@@ -82,7 +82,7 @@ void BenchmarkSort(const std::string& algorithm, const Arguments& arguments, Sor
   } else if (algorithm == "paradis-sort") {
     auto start = GetTimeNow();
 
-    paradis::sort<T>(keys.data(), keys.data() + arguments.num_keys, arguments.num_cpu_threads);
+    paradis::sort<T>(&keys.data()[0], &keys.data()[arguments.num_keys], arguments.num_cpu_threads);
 
     auto end = GetTimeNow();
     total_sort_duration = GetMilliseconds(start, end);
